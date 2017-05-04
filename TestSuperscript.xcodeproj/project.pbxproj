@@ -14,6 +14,7 @@
 		56E06B3E1BA33F36006E409B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56E06B3D1BA33F36006E409B /* Images.xcassets */; };
 		56E06B411BA33F36006E409B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E06B3F1BA33F36006E409B /* LaunchScreen.xib */; };
 		56E06B4D1BA33F36006E409B /* TestSuperscriptTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E06B4C1BA33F36006E409B /* TestSuperscriptTests.m */; };
+		56E06B571BA33F53006E409B /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E06B561BA33F53006E409B /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		56E06B461BA33F36006E409B /* TestSuperscriptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSuperscriptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56E06B4B1BA33F36006E409B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E06B4C1BA33F36006E409B /* TestSuperscriptTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSuperscriptTests.m; sourceTree = "<group>"; };
+		56E06B561BA33F53006E409B /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E06B571BA33F53006E409B /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		56E06B241BA33F36006E409B = {
 			isa = PBXGroup;
 			children = (
+				56E06B561BA33F53006E409B /* CoreText.framework */,
 				56E06B2F1BA33F36006E409B /* TestSuperscript */,
 				56E06B491BA33F36006E409B /* TestSuperscriptTests */,
 				56E06B2E1BA33F36006E409B /* Products */,
@@ -163,7 +167,7 @@
 		56E06B251BA33F36006E409B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Gautham S Shetty";
 				TargetAttributes = {
 					56E06B2C1BA33F36006E409B = {
@@ -276,14 +280,17 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -319,8 +326,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -349,6 +358,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestSuperscript/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tavant.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -359,6 +369,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestSuperscript/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tavant.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -377,6 +388,7 @@
 				);
 				INFOPLIST_FILE = TestSuperscriptTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tavant.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestSuperscript.app/TestSuperscript";
 			};
@@ -392,6 +404,7 @@
 				);
 				INFOPLIST_FILE = TestSuperscriptTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tavant.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestSuperscript.app/TestSuperscript";
 			};
@@ -416,6 +429,7 @@
 				56E06B521BA33F36006E409B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56E06B531BA33F36006E409B /* Build configuration list for PBXNativeTarget "TestSuperscriptTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +438,7 @@
 				56E06B551BA33F36006E409B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreText/CoreText.h>
 
 @interface ViewController : UIViewController
-
+@property (nonatomic, assign) IBOutlet UILabel *lbl;
 
 @end
 
