@@ -10,7 +10,8 @@
 #import <CoreText/CoreText.h>
 
 @interface ViewController : UIViewController
-@property (nonatomic, assign) IBOutlet UILabel *lbl;
-
+@property (nonatomic, assign) IBOutlet UILabel *lblSuperScript;
+@property (nonatomic, assign) IBOutlet UILabel *lblSubScript;
+@property (nonatomic, assign) IBOutlet UITextField *txtValue;
 @end
 
